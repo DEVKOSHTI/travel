@@ -1,50 +1,105 @@
-<%@ page import="java.sql.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-  <body>
-    <%
-      Connection conn = null;
-      ResultSet rs = null;
-      PreparedStatement stmt = null;
-      String query = "SELECT * FROM city";
-      try {
-        // Connect to MySQL database
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/world","root","12345678");
-        
-        // Prepare and execute SQL query
-        stmt = conn.prepareStatement(query);
-        rs = stmt.executeQuery();
-        
-        // Display results
-        while (rs.next()) {
-          out.println("City Name: " + rs.getString("Name") + "<br>");
-          out.println("Country Code: " + rs.getString("CountryCode") + "<br>");
-          out.println("District: " + rs.getString("District") + "<br>");
-          out.println("Population: " + rs.getInt("Population") + "<br>");
-          out.println("<br>");
-        }
-      } catch (ClassNotFoundException e) {
-        e.printStackTrace();
-      } catch (SQLException e) {
-        e.printStackTrace();
-      } finally {
-        // Close resources
-        if (rs != null) {
-          try {
-            rs.close();
-          } catch (SQLException e) {}
-        }
-        if (stmt != null) {
-          try {
-            stmt.close();
-          } catch (SQLException e) {}
-        }
-        if (conn != null) {
-          try {
-            conn.close();
-          } catch (SQLException e) {}
-        }
-      }
-    %>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>Places Page</title>
+	<style>
+		button {margin: 2px;}
+		.modal {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  padding-top: 100px; /* Location of the box */
+		  left: 0;
+		  top: 0;
+		  width: 100%; /* Full width */
+		  height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+
+		/* Modal Content (image) */
+		.modal-content {
+		  margin: auto;
+		  display: block;
+		  width: 80%;
+		  max-width: 700px;
+		}
+
+		/* Add Animation */
+		.modal-content, #caption {
+		  -webkit-animation-name: zoom;
+		  -webkit-animation-duration: 0.6s;
+		  animation-name: zoom;
+		  animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		  from {-webkit-transform:scale(0)}
+		  to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		  from {transform:scale(0)}
+		  to {transform:scale(1)}
+		}
+
+		/* The Close Button */
+		.close {
+		  position: absolute;
+		  top: 15px;
+		  right: 35px;
+		  color: #f1f1f1;
+		  font-size: 40px;
+		  font-weight: bold;
+		  transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: #bbb;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px){
+		  .modal-content {
+		    width: 100%;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<h1>View Places</h1>
+	<p>Select a place to view:</p>
+	<button onclick="openModal('MyPicture.jpeg')">Place 1</button><br>
+	<button onclick="openModal('image2.jpg')">Place 2</button><br>
+	<button onclick="openModal('MyPicture.jpeg')">Place 3</button><br>
+	<button onclick="openModal('image4.jpg')">Place 4</button><br>
+	<button onclick="openModal('image5.jpg')">Place 5</button><br><br>
+	<a href="booking.jsp"><button>Book a Ticket</button></a>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+	</div>
+
+	<script>
+		function openModal(imgSrc) {
+		  var modal = document.getElementById("myModal");
+		  var modalImg = document.getElementById("img01");
+		  modal.style.display = "block";
+		  modalImg.src = imgSrc;
+		  var span = document.getElementsByClassName("close")[0];
+		  span.onclick = function() {
+		    modal.style.display = "none";
+		  }
+		}
+	</script>
+</body>
 </html>
