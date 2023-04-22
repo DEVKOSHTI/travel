@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Show Page</title>
+	<title>Show Page created by Dev</title>
 </head>
 <body>
 	<h1>Ticket Details</h1>
@@ -35,5 +35,6 @@
 		}
 	%>
 	<a href="booking.jsp"><button>Book Another Ticket</button></a>
+	<br><footer>Created by Dev</footer>
 </body>
 </html>

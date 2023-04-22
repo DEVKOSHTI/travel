@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Booking Page</title>
+	<title>Booking Page created by Dev</title>
 </head>
 <body>
 	<h1>Book a Ticket</h1>
@@ -21,5 +21,6 @@
 		<input type="date" name="date" required><br>
 		<input type="submit" value="Book Now">
 	</form>
+	<br><footer>Created by Dev</footer>
 </body>
 </html>

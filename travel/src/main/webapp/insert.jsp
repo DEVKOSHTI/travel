@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert Page</title>
+	<title>Insert Page created by Dev</title>
 </head>
 <body>
 	<%
@@ -49,5 +49,6 @@
 			out.println(e);
 		}
 	%>
+	<br><footer>Created by Dev</footer>
 </body>
 </html>
