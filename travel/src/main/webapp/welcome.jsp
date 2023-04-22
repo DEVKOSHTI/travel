@@ -11,6 +11,7 @@
 	<p>Please select an option:</p>
 	<a href="places.jsp"><button>View Places</button></a>
 	<a href="booking.jsp"><button>Book a Ticket</button></a>
+	<a href="show.jsp"><button>show Ticket</button></a>
 	<br><footer>Created by Dev</footer>
 </body>
 </html>
