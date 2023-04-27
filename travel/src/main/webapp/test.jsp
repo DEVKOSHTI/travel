@@ -6,6 +6,8 @@
 	<meta charset="UTF-8">
 	<title>Places Page</title>
 	<style>
+	 div{color:white;
+	 align: center;}
 		button {margin: 2px;}
 		.modal {
 		  display: none; /* Hidden by default */
@@ -37,15 +39,6 @@
 		  animation-duration: 0.6s;
 		}
 
-		@-webkit-keyframes zoom {
-		  from {-webkit-transform:scale(0)}
-		  to {-webkit-transform:scale(1)}
-		}
-
-		@keyframes zoom {
-		  from {transform:scale(0)}
-		  to {transform:scale(1)}
-		}
 
 		/* The Close Button */
 		.close {
@@ -86,7 +79,8 @@
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<span class="close">&times;</span>
-		<img class="modal-content" id="img01">
+		<div >place 1</div>
+		<a href="booking.jsp"><img class="modal-content" id="img01"></a><br>		
 	</div>
 
 	<script>

@@ -10,8 +10,8 @@
 <body>
 	<h1>Ticket Details</h1>
 	<form action="show.jsp" method="post">
-		<label for="ticket_id">Enter Ticket ID:</label>
-		<input type="text" name="ticket_id">
+		<label for="ticket_id">Enter phone number:</label>
+		<input type="text" name="ticket_id" required>
 		<input type="submit" value="Show Details">
 	</form>
 	<%
@@ -24,8 +24,11 @@
 				ps.setString(1,ticket_id);
 				ResultSet rs = ps.executeQuery();
 				if(rs.next()){
-					out.print("<table border='1'><tr><th>Name</th><th>Email</th><th>Phone</th><th>Place</th><th>Date</th></tr>");
-					out.print("<tr><td>"+rs.getString("name")+"</td><td>"+rs.getString("email")+"</td><td>"+rs.getString("phone")+"</td><td>"+rs.getString("place")+"</td><td>"+rs.getString("date")+"</td></tr></table>");
+				out.print("<table border='1'><tr><th>Name</th><th>Email</th><th>Phone</th><th>Place</th><th>Date</th></tr>");
+				do{
+					out.print("<tr><td>"+rs.getString("name")+"</td><td>"+rs.getString("email")+"</td><td>"+rs.getString("phone")+"</td><td>"+rs.getString("place")+"</td><td>"+rs.getString("date")+"</td></tr>");
+				}while(rs.next());
+				out.print("</table>"); 
 				}else{
 					out.print("<p>No records found for Ticket ID: "+ticket_id+"</p>");
 				}

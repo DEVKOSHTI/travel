@@ -10,16 +10,28 @@
 			margin: 3px;
 		}
 	</style>
+	<link rel="stylesheet" href="bus.css">
 </head>
 <body>
-	<h1>View Places</h1>
+<div class="loop-wrapper">
+	<div class="mountain"></div>
+        <div class="hill"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="rock"></div>
+        <div class="truck"></div>
+        <div class="wheels"></div>
+
+	<div class="a"><h1>View Places</h1>
 	<p>Select a place to view:</p>
-	<button><a href="#"><img src="image1.jpg"></a></button><br>
-	<button><a href="#"><img src="image2.jpg"></a></button><br>
-	<button><a href="#"><img src="image3.jpg"></a></button><br>
-	<button><a href="#"><img src="image4.jpg"></a></button><br>
-	<button><a href="#"><img src="image5.jpg"></a></button><br>
+	<a href="MyPicture.jpeg"><button>Place 1</button></a><br>
+	<a href="MyPicture.jpeg"><button>Place 2</button></a><br>
+	<a href="MyPicture.jpeg"><button>Place 3</button></a><br>
+	<a href="MyPicture.jpeg"><button>Place 4</button></a><br>
+	<a href="MyPicture.jpeg"><button>Place 5</button></a><br>
 	<a href="booking.jsp" id="ticket"><button style="margin: 10px;">Book a Ticket</button></a>
-	<br><footer>Created by Dev</footer>
+	</div>
+	</div>
 </body>
 </html>

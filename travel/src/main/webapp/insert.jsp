@@ -31,11 +31,6 @@
 
 			if(i>0){
 				out.println("<p>Ticket Booked Successfully!</p>");
-				out.println("<p>Name: " + name + "</p>");
-				out.println("<p>Email: " + email + "</p>");
-				out.println("<p>Phone: " + phone + "</p>");
-				out.println("<p>Place: " + place + "</p>");
-				out.println("<p>Date: " + date + "</p>");
 				out.println("<a href='booking.jsp'><button>Book Another Ticket</button></a>");
 				out.println("<a href='show.jsp'><button>View Booked Tickets</button></a>");
 			}
@@ -49,6 +44,6 @@
 			out.println(e);
 		}
 	%>
-	<br><footer>Created by Dev</footer>
+	<br><br><footer>Created by Dev</footer>
 </body>
 </html>
