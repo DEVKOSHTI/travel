@@ -21,13 +21,13 @@
 	<p align="center">Please select an option:</p>
 	<ul class="a">
 	<li>
-		<a href="show.jsp" >show Ticket</a>
+		<a href="places.jsp">View Places</a>
 	</li>
 	<li>
 		<a href="booking.jsp">Book a Ticket</a>
 	</li>
 	<li>
-		<a href="places.jsp">View Places</a>
+		<a href="show.jsp" >show Ticket</a>
 	</li>
 	</div>
 	</div>
