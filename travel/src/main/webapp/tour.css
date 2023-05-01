@@ -1,0 +1,91 @@
+body { 
+  background-image: url("tour-operator-business-plan.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  margin: 0px;
+  height: 100%;
+  }
+  header{
+    margin: auto;
+    padding: 1px;
+    
+  } 
+  #selected{
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 4px;
+    color: #fff;
+    background-color: #649119;
+  }
+  .a {
+   text-align:center;
+   display: block;
+   color: #fff;
+   margin:5px;
+  }
+ 
+  .a li{
+    display: block;
+    clear: both;
+    margin: 2px;
+  }
+  #ticket{
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px #fff solid;
+    border-radius: 6px;
+    margin: 17px;
+    padding: 8px;
+    width: 144px;
+    color: #fff;
+  }
+  .a a{
+    display: inline-block;
+    text-decoration: none;
+    border: 2px #fff solid;
+    border-radius: 6px;
+    margin: 2px;
+    padding: 2px;
+    width: 100px;
+    color: #fff;
+  }
+  .a a:hover{
+    text-decoration: none;
+    border: 2px #fff solid;
+    border-radius: 6px;
+    padding: 4px;
+    color: #fff;
+  }
+  .nav{
+    display: block;
+    text-align: center;
+    list-style: none;
+  }
+  li{
+    display: inline-block;
+  }
+  li a{
+    margin: 3px;
+    text-decoration: none;
+    border-radius: 6px;
+    width: 100px;
+    padding: 6px;
+    color: #fff;
+    background-color: #00b8ff;
+  }
+   li a:active,li a:hover{
+    text-decoration: none;
+    border: 2px #fff solid;
+    border-radius: 6px;
+    padding: 4px;
+    color: #fff;
+    background-color: #58a59e;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }

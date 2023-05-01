@@ -6,8 +6,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert Page created by Dev</title>
+	<link rel="stylesheet" href="tour.css">
 </head>
 <body>
+	<header class="header">
+		<ul class="nav">
+			<li><a href="welcome.jsp">home</a></li>
+			<li><a href="places.jsp">places</a></li>
+			<li><a href="booking.jsp">booking</a></li>
+			<li><a href="show.jsp">show</a></li>
+		</ul>
+	</header>
 	<%
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
@@ -30,10 +39,9 @@
 			int i = ps.executeUpdate();
 
 			if(i>0){
-				out.println("<p>Ticket Booked Successfully!</p>");
-				out.println("<p>thank you,visiit again<p>");
+				out.println("<div class='a'><p>Ticket Booked Successfully!</p>");
 				out.println("<a href='booking.jsp'><button>Book Another Ticket</button></a>");
-				out.println("<a href='show.jsp'><button>View Booked Tickets</button></a>");
+				out.println("<a href='show.jsp'><button>View Booked Tickets</button></a></div>");
 			}
 			else{
 				out.println("<p>Sorry! Something went wrong.</p>");
@@ -42,9 +50,8 @@
 			con.close();
 		}
 		catch(Exception e){
-			out.println(e);
+			out.println("<h3 class='a'>"+e+"</h3>");
 		}
-	%>
-	<br><br><footer>Created by Dev</footer>
+		%>
 </body>
 </html>

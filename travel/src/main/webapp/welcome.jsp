@@ -4,25 +4,32 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome Page created by Dev</title>
-	<link rel="stylesheet" href="bus.css">
+	<title>Welcome Page created by Dev,Yash,Shubham </title>
+	<link rel="stylesheet" href="tour.css">
 </head>
 <body>
-	<div class="loop-wrapper">
-        <div class="mountain"></div>
-        <div class="hill"></div>
-        <div class="tree"></div>
-        <div class="tree"></div>
-        <div class="tree"></div>
-        <div class="rock"></div>
-        <div class="truck"></div>
-        <div class="wheels"></div>
+	<header class="header">
+		<ul class="nav">
+			<li><a href="welcome.jsp" id="selected">home</a></li>
+			<li><a href="places.jsp">places</a></li>
+			<li><a href="booking.jsp">booking</a></li>
+			<li><a href="show.jsp">show</a></li>
+		</ul>
+	</header>
+	<div>
 	<h1 align="center">Welcome to Tour Management System</h1>
 	<p align="center">Please select an option:</p>
-	<div class="a">
-	<a href="places.jsp"><button>View Places</button></a>
-	<a href="booking.jsp"><button>Book a Ticket</button></a>
-	<a href="show.jsp" ><button>show Ticket</button></a></div>
+	<ul class="a">
+	<li>
+		<a href="show.jsp" >show Ticket</a>
+	</li>
+	<li>
+		<a href="booking.jsp">Book a Ticket</a>
+	</li>
+	<li>
+		<a href="places.jsp">View Places</a>
+	</li>
+	</div>
 	</div>
 </body>
 </html>
