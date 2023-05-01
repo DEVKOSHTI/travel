@@ -22,7 +22,7 @@
 		<div class="a">
 		<label for="ticket_id">Enter phone number:</label>
 		<input type="text" name="ticket_id" required>
-		<input type="submit" value="Show Details">
+		<input type="submit" value="Show Details" class="button">
 		</div>
 	</form>
 	<%
@@ -48,6 +48,6 @@
 			}
 		}
 	%>
-	<a href="booking.jsp" class="a"><button>Book Another Ticket</button></a>
+	<a href="booking.jsp" class="a"><button class="button">Book Another Ticket</button></a>
 </body>
 </html>

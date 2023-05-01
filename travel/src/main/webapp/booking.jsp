@@ -29,7 +29,7 @@
 		<input type="text" name="place" required placeholder="Enter Place to visit"></div>
 		<div class="a"><label for="date">Date:</label>
 		<input type="date" name="date" required></div>
-		<div class="a"><input type="submit" value="Book Now" ></div>
+		<div class="a"><input type="submit" value="Book Now" class="button"></div>
 	</form>
 </body>
 </html>
