@@ -29,7 +29,7 @@
 	<li>
 		<a href="show.jsp" >show Ticket</a>
 	</li>
-	</div>
+	</ul>
 	</div>
 </body>
 </html>

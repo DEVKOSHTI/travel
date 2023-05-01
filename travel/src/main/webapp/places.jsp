@@ -30,6 +30,5 @@
 	<a href="fnmqtte1kn8fqazxzvu6fnim9vt0_1586518830_maxresdefault.jpg">Ujjain</a><br>
 	<a href="booking.jsp" id="ticket">Book a Ticket</a>
 	</div>
-	</div>
 </body>
 </html>
