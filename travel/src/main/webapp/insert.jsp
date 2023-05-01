@@ -31,6 +31,7 @@
 
 			if(i>0){
 				out.println("<p>Ticket Booked Successfully!</p>");
+				out.println("<p>thank you,visiit again<p>");
 				out.println("<a href='booking.jsp'><button>Book Another Ticket</button></a>");
 				out.println("<a href='show.jsp'><button>View Booked Tickets</button></a>");
 			}
