@@ -6,10 +6,20 @@
 	<meta charset="UTF-8">
 	<title>Welcome Page created by Dev,Yash,Shubham </title>
 	<link rel="stylesheet" href="tour.css">
+	<style type="text/css">
+	 img{
+	 filter:invert(100%);
+    width: 30px;
+    height: 35px;
+    margin: -12px 4px;
+    padding: 0px;
+  }
+  </style>
 </head>
 <body>
 	<header class="header">
 		<ul class="nav">
+		    <li><img src="bus.png"></li>
 			<li><a href="welcome.jsp" id="selected">home</a></li>
 			<li><a href="places.jsp">places</a></li>
 			<li><a href="booking.jsp">booking</a></li>

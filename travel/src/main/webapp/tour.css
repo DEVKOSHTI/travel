@@ -54,6 +54,12 @@ body {
     width: 100px;
     color: #fff;
   }
+  img{
+    width: 24px;
+    height: 30px;
+    margin: -19px -3px;
+    padding: 10px;
+  }
   .a a:hover{
     text-decoration: none;
     border: 2px #fff solid;
@@ -62,7 +68,7 @@ body {
     color: #fff;
   }
   .nav{
-    display: block;
+    display: inline-block;
     text-align: center;
     list-style: none;
   }
