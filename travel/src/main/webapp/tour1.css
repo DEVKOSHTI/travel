@@ -1,4 +1,5 @@
 body { 
+	
   background-image: url("tour-operator-business-plan.webp");
   background-size: cover;
   background-position: center center;
@@ -8,6 +9,7 @@ body {
   color: #fff;
   margin: 0px;
   height: 560px;
+  display:flex;
   }
   header{
     margin: auto;
@@ -114,3 +116,11 @@ body {
     color: #fff;
     background-color: #58a59e;
   }
+  #box{
+  display:flex;
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}

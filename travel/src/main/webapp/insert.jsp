@@ -31,20 +31,30 @@
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
-		String place = request.getParameter("place");
+		String from = request.getParameter("From");
+		String to = request.getParameter("To");
 		String date = request.getParameter("date");
-
+		String adult = request.getParameter("Adults");
+		String children = request.getParameter("Children");
+		String bus = request.getParameter("Bus");
+		String sr = request.getParameter("Single/Return");
+	
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tour_db","root","12345678");
 
-			PreparedStatement ps = con.prepareStatement("insert into ticket(name,email,phone,place,date) values(?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into ticket(name,email,phone,adult,children,date,from,to,bus,sr) values(?,?,?,?,?,?,?,?,?,?)");
 
 			ps.setString(1,name);
 			ps.setString(2,email);
 			ps.setString(3,phone);
-			ps.setString(4,place);
-			ps.setString(5,date);
+			ps.setString(4,adult);
+			ps.setString(5,children);
+			ps.setString(6,date);
+			ps.setString(7,from);
+			ps.setString(8,to);
+			ps.setString(9,bus);
+			ps.setString(10,sr);
 
 			int i = ps.executeUpdate();
 

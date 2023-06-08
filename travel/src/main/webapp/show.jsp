@@ -45,9 +45,9 @@
 				ps.setString(1,ticket_id);
 				ResultSet rs = ps.executeQuery();
 				if(rs.next()){
-				out.print("<table border='1' class='center'><tr><th>Name</th><th>Email</th><th>Phone</th><th>Place</th><th>Date</th></tr>");
+				out.print("<table border='1' class='center'><tr><th>Name</th><th>Email</th><th>Phone</th><th>Adults</th><th>childrens</th><th>Date</th><th>From</th><th>To</th><th>Bus</th><th>Single/Return</th></tr>");
 				do{
-					out.print("<tr><td>"+rs.getString("name")+"</td><td>"+rs.getString("email")+"</td><td>"+rs.getString("phone")+"</td><td>"+rs.getString("place")+"</td><td>"+rs.getString("date")+"</td></tr>");
+					out.print("<tr><td>"+rs.getString("name")+"</td><td>"+rs.getString("email")+"</td><td>"+rs.getString("phone")+"</td><td>"+rs.getString("adult")+"</td><td>"+rs.getString("children")+"</td><td>"+rs.getString("date")+"</td><td>"+rs.getString("from")+"</td><td>"+rs.getString("to")+"</td><td>"+rs.getString("bus")+"</td><td>"+rs.getString("sr")+"</td></tr>");
 				}while(rs.next());
 				out.print("</table>"); 
 				}else{

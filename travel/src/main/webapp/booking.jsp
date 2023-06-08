@@ -7,15 +7,6 @@
 	<title>Booking Page created by Dev</title>
 	<link rel="stylesheet" href="tour.css">
 	<script src="sweetalert.min.js"></script>
-	<style type="text/css">
-	 img{
-	 filter:invert(100%);
-    width: 30px;
-    height: 35px;
-    margin: -12px 4px;
-    padding: 0px;
-  }
-  </style>
 </head>
 <body>
 	<header class="header">
@@ -27,10 +18,11 @@
 			<li><a href="show.jsp">show</a></li>
 		</ul>
 	</header>
+	<div id="box">
 	<div class="a"><h1>Book a Ticket</h1></div>
 	<form action="insert.jsp" method="post" onsubmit="return submitForm(this);">
 		<div class="a">Name:&nbsp;<input type="text" name="name" required placeholder="Firstname Lastname"></div>
-		<div class="a">Email:&nbsp;<input type="email" name="email" required placeholder="namw@something.com"></div>
+		<div class="a">Email:&nbsp;<input type="email" name="email" required placeholder="name@something.com"></div>
 		<div class="a">Phone:&nbsp;<input type="tel" name="phone" required placeholder="Phone Number"></div>
 		<div class="a">Adults:&nbsp;<input type="number" name="Adults" required placeholder="Numbers of adults"></div>
 		<div class="a">Children:&nbsp;<input type="number" name="Children" required placeholder="Numbers of children"></div>
@@ -41,6 +33,7 @@
 		<div class="a">Single/Return:&nbsp;<input type="text" name="Single/Return" required placeholder="Single/Return"></div>
 		<div class="a"><input type="submit" value="Book Now" class="button"></div>
 	</form>
+	</div>
 	<script>
     function submitForm(form) {
         swal({
