@@ -4,23 +4,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-	 img{
-	 filter:invert(100%);
-    width: 30px;
-    height: 35px;
-    margin: -12px 4px;
-    padding: 0px;
-  }
-  </style>
 	<meta charset="UTF-8">
-	<title>Insert Page created by Dev</title>
+	<title>Insert Page</title>
 	<link rel="stylesheet" href="tour.css">
+	<!-- <style type="text/css">
+		body{
+			background-color: #58a59e;
+			text-decoration: none;
+		}
+		header::before{
+			background: url(tour-operator-business-plan.webp) no-repeat center center/cover;
+			top: 0%;
+			left: 0%;
+			content: "";
+			position: absolute;
+			z-index: -1;
+			width:100%;
+			height:100%;
+		}
+		header{
+			margin: 0%;
+			display: flex;
+			flex-direction: row;
+		}
+		.nav{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content:flex-start;
+			width: 100%;
+			margin: 0%;
+			
+		}
+		#selected{
+    		text-decoration: none;
+    		border-radius: 6px;
+    		padding: 6px;
+    		color: #fff;
+    		background-color: #649119;
+  		}
+		li a{
+    		margin: 3px;
+    		text-decoration: none;
+    		border-radius: 6px;
+    		width: 100px;
+    		padding: 6px;
+    		color: #fff;
+    		background-color: #00b8ff;
+  		}
+   		li a:active,li a:hover{
+    		text-decoration: none;
+    		border: 2px #fff solid;
+    		border-radius: 6px;
+    		padding: 4px;
+    		color: #fff;
+    		background-color: #58a59e;
+  		}
+		li{
+			list-style: none;
+			padding: 11px 11px;
+		}
+		li img{
+			width: 43px;
+    		height: 48px;
+    		filter: invert(1);
+		}
+  	</style> -->
 </head>
 <body>
 	<header class="header">
 		<ul class="nav">
-			 <li><img src="bus.png"></li>
+			 <li><img src="image/bus.png"></li>
 			<li><a href="welcome.jsp">home</a></li>
 			<li><a href="places.jsp">places</a></li>
 			<li><a href="booking.jsp">booking</a></li>
@@ -43,7 +97,7 @@
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tour_db","root","12345678");
 
-			PreparedStatement ps = con.prepareStatement("insert into ticket(name,email,phone,adult,children,date,from,to,bus,sr) values(?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into ticket(name,email,phone,adult,children,date,`from`,`to`,bus,sr) values(?,?,?,?,?,?,?,?,?,?)");
 
 			ps.setString(1,name);
 			ps.setString(2,email);
@@ -60,8 +114,8 @@
 
 			if(i>0){
 				out.println("<div class='a'><p>Ticket Booked Successfully!</p>");
-				out.println("<a href='booking.jsp'><button>Book Another Ticket</button></a>");
-				out.println("<a href='show.jsp'><button>View Booked Tickets</button></a></div>");
+				out.println("<a href='booking.jsp'><button class='button'>Book Another Ticket</button></a>");
+				out.println("<a href='show.jsp'><button class ='button'>View Booked Tickets</button></a></div>");
 			}
 			else{
 				out.println("<p>Sorry! Something went wrong.</p>");
