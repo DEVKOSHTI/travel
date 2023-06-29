@@ -7,69 +7,6 @@
 	<meta charset="UTF-8">
 	<title>Show Page</title>
 	<link rel="stylesheet" href="tour.css">
-	<!-- <style type="text/css">
-		body{
-			background-color: #58a59e;
-			text-decoration: none;
-		}
-		header::before{
-			background: url(tour-operator-business-plan.webp) no-repeat center center/cover;
-			top: 0%;
-			left: 0%;
-			content: "";
-			position: absolute;
-			z-index: -1;
-			width:100%;
-			height:100%;
-		}
-		header{
-			margin: 0%;
-			display: flex;
-			flex-direction: row;
-		}
-		.nav{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content:flex-start;
-			width: 100%;
-			margin: 0%;
-			
-		}
-		#selected{
-    		text-decoration: none;
-    		border-radius: 6px;
-    		padding: 6px;
-    		color: #fff;
-    		background-color: #649119;
-  		}
-		li a{
-    		margin: 3px;
-    		text-decoration: none;
-    		border-radius: 6px;
-    		width: 100px;
-    		padding: 6px;
-    		color: #fff;
-    		background-color: #00b8ff;
-  		}
-   		li a:active,li a:hover{
-    		text-decoration: none;
-    		border: 2px #fff solid;
-    		border-radius: 6px;
-    		padding: 4px;
-    		color: #fff;
-    		background-color: #58a59e;
-  		}
-		li{
-			list-style: none;
-			padding: 11px 11px;
-		}
-		li img{
-			width: 43px;
-    		height: 48px;
-    		filter: invert(1);
-		}
-  	</style> -->
 </head>
 <body>
 	<header class="header">
@@ -102,11 +39,11 @@
 				ps.setString(1,ticket_id);
 				ResultSet rs = ps.executeQuery();
 				if(rs.next()){
-				out.print("<table border='1' class='center'><tr><th>Name</th><th>Email</th><th>Phone</th><th>Adults</th><th>childrens</th><th>Date</th><th>From</th><th>To</th><th>Bus</th><th>Single/Return</th></tr>");
+				out.print("<div><table border='1' class='center'><tr><th>Name</th><th>Email</th><th>Phone</th><th>Adults</th><th>childrens</th><th>Date</th><th>From</th><th>To</th><th>Bus</th><th>Single/Return</th></tr>");
 				do{
 					out.print("<tr><td>"+rs.getString("name")+"</td><td>"+rs.getString("email")+"</td><td>"+rs.getString("phone")+"</td><td>"+rs.getString("adult")+"</td><td>"+rs.getString("children")+"</td><td>"+rs.getString("date")+"</td><td>"+rs.getString("from")+"</td><td>"+rs.getString("to")+"</td><td>"+rs.getString("bus")+"</td><td>"+rs.getString("sr")+"</td></tr>");
 				}while(rs.next());
-				out.print("</table>"); 
+				out.print("</table></div>"); 
 				}else{
 					out.print("<p>No records found for Phone number: "+ticket_id+"</p>");
 				}
